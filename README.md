@@ -6,4 +6,8 @@ This Project is going to use GitHub, Unity, and 3D Slicer
   - 3D Slicer is going to be used for Model dev. and Model prejection through Unity
 
 Visual:
-3D Slicer ---[IGTP Connection]---> Unity ---> HoloLens
+Using Uinty based application for full deployment 
+  3 Teams:
+    1. Control board: Justin & Katie
+    2. Unity Models and Setup in unity: Adam & Maddy
+    3. Volumetric Research: Caleb & Cam 
