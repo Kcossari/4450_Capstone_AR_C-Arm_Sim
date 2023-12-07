@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test Scenes/Room Setting.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d93489c7387e0a4409ffe8563c4c8c01, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 30c49aa1d488dcf4cbbca779b59e1720, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8b199fb41a45f5241863b25d51e47eab, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 9165366e72500014eb8384e2e903d3dd, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f928df79aa1252140af9d88fea45f8a6, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bda60f00cdd314946b15d20f3aff7253, type: 2}
