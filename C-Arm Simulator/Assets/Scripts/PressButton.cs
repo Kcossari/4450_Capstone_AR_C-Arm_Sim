@@ -8,6 +8,7 @@ public class PressButton : MonoBehaviour
 {
       
     public GameObject buttonDown;
+    public GameObject table;
     private Vector3 initialPosition;
     private bool isButtonDown = false;
     private float elapsedTime = 0f;
@@ -15,38 +16,34 @@ public class PressButton : MonoBehaviour
 
     void Start()
     {
-        initialPosition = transform.position;
+        initialPosition = table.transform.position;
+        
+        
     }
 
     void Update()
     {
-        if (isButtonDown)
-        {
-            MoveButtonDown();
-        }
+   //     if (isButtonDown)
+   //     {
+   //         MoveButtonDown();
+  //      }
     }
 
     private void OnMouseDown()
     {
-        isButtonDown = true;
-        elapsedTime = 0f;
+    //    isButtonDown = true;
+   //     elapsedTime = 0f;
     }
 
     private void MoveButtonDown()
     {
+        /*
         if (elapsedTime < duration)
-        {
-            buttonDown.transform.position = Vector3.Lerp(initialPosition, initialPosition + new Vector3(0, -0.3f, 0), elapsedTime / duration);
-            elapsedTime += Time.deltaTime;
+       {
+          buttonDown.transform.position = Vector3.Lerp(initialPosition, initialPosition + new Vector3(0, -0.3f, 0), elapsedTime / duration);
+           elapsedTime += Time.deltaTime;
         }
-      //  else if (elapsedTime < 2 * duration + 0.5f)
-     //   {
-            // Ensure the final position is set to the target position
-    //        buttonDown.transform.position = initialPosition + new Vector3(0, -2, 0);
-
-            // Wait for a brief moment before moving back up
-     //       elapsedTime += Time.deltaTime;
-     //   }
+   
         else
         {
             
@@ -63,5 +60,31 @@ public class PressButton : MonoBehaviour
                 isButtonDown = false;
             }
         }
+        */
+    }
+
+    public void onButtonGrab()
+    {
+        Debug.Log("A button has been pressed");
+        if (elapsedTime < duration)
+        {
+            table.transform.position = Vector3.Lerp(initialPosition, initialPosition + new Vector3(0, -0.3f, 0), elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+        }
+    }
+    public void onButtonRelease()
+    {
+        Debug.Log("A button has be let go");
+        
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        Debug.Log("button is being pressed");
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Debug.Log("button no longer being pressed");
     }
 }

@@ -21,7 +21,9 @@ public class KnobTwist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    
+   //    Debug.Log(handle.transform.rotation.y);
+
     }
 
     private void OnMouseDrag()
@@ -32,7 +34,7 @@ public class KnobTwist : MonoBehaviour
        Quaternion r = Quaternion.AngleAxis(angle *2, Vector3.up);
        handle.transform.rotation = r;
         
-          Debug.Log(angle);  
+       //   Debug.Log(angle);  
     }
     
     

@@ -11,6 +11,55 @@
         "com.unity.xr.core-utils": "2.1.0"
       }
     },
+    "com.microsoft.mixedreality.toolkit.examples": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.foundation": "2.8.3",
+        "com.microsoft.mixedreality.toolkit.extensions": "2.8.3"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.extensions": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.foundation": "2.8.3"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.foundation": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.standardassets": "2.8.3"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.standardassets": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.textmeshpro": "2.1.4"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.testutilities": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.testutilities-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.foundation": "2.8.3"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.tools": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.tools-2.8.3.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.foundation": "2.8.3"
+      }
+    },
     "com.microsoft.spatialaudio.spatializer.unity": {
       "version": "file:MixedReality/com.microsoft.spatialaudio.spatializer.unity-2.0.47.tgz",
       "depth": 0,
@@ -100,9 +149,20 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.probuilder": {
+      "version": "5.1.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.settings-manager": "1.0.3",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.settings-manager": {
       "version": "2.0.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -205,8 +265,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.3.3",
-      "depth": 1,
+      "version": "4.4.0",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0",
