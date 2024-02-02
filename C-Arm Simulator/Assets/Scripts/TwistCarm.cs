@@ -21,7 +21,7 @@ public class TwistCarm : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (knob != null && cArm != null)
         {
