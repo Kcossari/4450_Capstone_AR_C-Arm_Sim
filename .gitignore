@@ -8,6 +8,7 @@
 /C-Arm Simulator/[Bb]uild/
 /C-Arm Simulator/[Bb]uilds/
 /C-Arm Simulator/[Ll]ogs/
+/C-Arm Simulator/[Ee]xecutable/
 
 
 # MemoryCaptures can get excessive in size.
