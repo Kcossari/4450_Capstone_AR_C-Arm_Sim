@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import nibabel as nib
+import os
+import time
 
 # Function to normalize a numpy array to a given range
 def normalize_array(array, min_val, max_val):
@@ -80,20 +82,24 @@ def save_xray_to_png(xray_image, file_name):
     plt.savefig(file_name, bbox_inches='tight', pad_inches=0)
     plt.close()
 
+# Replace 'your_image_file.nii' with the path to your NIfTI file
+nifti_file_path = 'LumbarSpinePhantom_CT.nii'
+nifti_image = nib.load(nifti_file_path)
+
+# Get the data as a numpy array
+image_data = nifti_image.get_fdata()
+
+# Normalize the image data to 0 - 100
+normalized_image_data = normalize_array(image_data, 0, 100)
+
+# Specify the output text file path
+output_text_file = 'output_3d_array.txt'
+save_3d_array_to_text(image_data, output_text_file)
+
 def main():
-    # Replace 'your_image_file.nii' with the path to your NIfTI file
-    nifti_file_path = 'LumbarSpinePhantom_CT.nii'
-    nifti_image = nib.load(nifti_file_path)
-
-    # Get the data as a numpy array
-    image_data = nifti_image.get_fdata()
-
-    # Normalize the image data to 0 - 100
-    normalized_image_data = normalize_array(image_data, 0, 100)
-
-    # Specify the output text file path
-    output_text_file = 'output_3d_array.txt'
-    save_3d_array_to_text(normalized_image_data, output_text_file)
+    # Wait until the output text file is created
+    while not os.path.exists(output_text_file):
+        time.sleep(1)  # Wait for 1 second before checking again
     
     text_file_path = 'output_3d_array.txt'
     voxel_array = read_3d_array_from_text(text_file_path)
