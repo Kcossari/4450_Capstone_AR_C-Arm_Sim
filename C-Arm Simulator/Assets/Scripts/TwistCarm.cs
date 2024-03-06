@@ -8,15 +8,22 @@ public class TwistCarm : MonoBehaviour
 {
     public GameObject knob;
     public GameObject cArm;
+    public GameObject knobB;
+    
+    
+    
     private float initialXPositionObject2;
+    private float initalYPos;
     private float initialCarm;
     void Start()
     {
         if (knob != null)
         {
             // Store the initial X position of object2
-            initialXPositionObject2 = knob.transform.eulerAngles.y;
-            initialCarm = cArm.transform.eulerAngles.x;
+           // initialXPositionObject2 = knob.transform.eulerAngles.y;
+           initialXPositionObject2 = knob.transform.rotation.y;
+           initalYPos = knobB.transform.rotation.y;
+           initialCarm = cArm.transform.eulerAngles.x;
         }
     }
 
@@ -29,13 +36,18 @@ public class TwistCarm : MonoBehaviour
             // Set the rotation of object1's Transform component
             // to match the y rotation of object2's Transform component
            
-            float knobRotation = knob.transform.eulerAngles.y;
+           // float knobRotation = knob.transform.eulerAngles.y;
+            float knobRotation = knob.transform.rotation.y;
 
+            float knobBRot = knobB.transform.rotation.y;
             // Calculate the desired x rotation for the cArm
-         
-            float desiredXRotation = (knobRotation - initialXPositionObject2);
+           // knobRotation = knobRotation * 100;
+            float desiredXRotation = (knobRotation - initialXPositionObject2) *100;
+            float desiredZRotation = (knobBRot - initalYPos) * 100;
+            
             //float desiredXRotation = knobRotation;
-
+            Debug.Log( desiredZRotation);
+            
             if (desiredXRotation <= -45f)
             {
                 desiredXRotation = -45f;
@@ -44,6 +56,15 @@ public class TwistCarm : MonoBehaviour
             {
                 desiredXRotation = 45f;
             }
+            
+            if (desiredZRotation <= -30f)
+            {
+                desiredZRotation = -30f;
+            } 
+            if (desiredZRotation >= 30f)
+            {
+                desiredZRotation = 30f;
+            }
           
             
             // Apply the rotation to the cArm
@@ -51,11 +72,13 @@ public class TwistCarm : MonoBehaviour
             ///desiredXRotation = desiredXRotation + 90f;
 
             desiredXRotation = desiredXRotation + 180f;
-            Debug.Log(desiredXRotation);
+            
+            
+            //Debug.Log(desiredXRotation);
             
            
             
-           cArm.transform.eulerAngles = new Vector3(desiredXRotation, 0f, 0f);
+           cArm.transform.eulerAngles = new Vector3(desiredXRotation, desiredZRotation, 0f);
            
             // need a function that will fluently map the knobs y roation to the c arms x rotation
             
