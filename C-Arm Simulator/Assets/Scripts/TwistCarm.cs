@@ -46,7 +46,7 @@ public class TwistCarm : MonoBehaviour
             float desiredZRotation = (knobBRot - initalYPos) * 100;
             
             //float desiredXRotation = knobRotation;
-            Debug.Log( desiredZRotation);
+            
             
             if (desiredXRotation <= -45f)
             {

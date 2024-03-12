@@ -31,7 +31,7 @@ public class RotateLRCarm : MonoBehaviour
             float knobRotation = knob.transform.rotation.y;
             float desiredZRotation = (knobRotation - initialXPositionObject2) * 100;
             
-            Debug.Log(knobRotation + " " + desiredZRotation);
+            
 
             /*
             if (desiredXRotation <= -45f)
