@@ -136,7 +136,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 70683042762122465, guid: f928df79aa1252140af9d88fea45f8a6, type: 2}
+  - {fileID: 11400000, guid: 9165366e72500014eb8384e2e903d3dd, type: 2}
+  - {fileID: -9220907317810636032, guid: bda60f00cdd314946b15d20f3aff7253, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -768,7 +771,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: HololensTest
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
@@ -776,7 +779,7 @@ PlayerSettings:
   metroCertificateNotAfter: 004be0263d48db01
   metroApplicationDescription: HololensTest
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: HololensTest
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
