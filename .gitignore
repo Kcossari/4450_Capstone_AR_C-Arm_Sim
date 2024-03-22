@@ -8,6 +8,8 @@
 /C-Arm Simulator/[Bb]uild/
 /C-Arm Simulator/[Bb]uilds/
 /C-Arm Simulator/[Ll]ogs/
+/C-Arm Simulator/Executable/
+/C-Arm Simulator/output_3d_array.txt
 
 
 # MemoryCaptures can get excessive in size.
