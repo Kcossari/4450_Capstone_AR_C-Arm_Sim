@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class TableXMovment : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public GameObject table;
     public GameObject arch;
     private float initialXPositionObject2;
     private float initialtablePostion;
+    private GameObject spine;
     void Start()
     {
         if (arch != null)
@@ -30,16 +29,16 @@ public class TableXMovment : MonoBehaviour
         {
             // Get the current position of object1
             Vector3 currentPosition = table.transform.position;
-
+            
             // Set the X position of object1 to match the Y position of object2
-            currentPosition.z =   currentPosition.z   + (arch.transform.position.x - initialXPositionObject2) ;
+            currentPosition.z =   initialtablePostion   + (arch.transform.position.x - initialXPositionObject2) ;
             
             // Apply the updated position to object1
-            if (currentPosition.z > 6f)
+            if (currentPosition.z > initialtablePostion + 6f)
             {
                 currentPosition.z = 6f;
                 table.transform.position = currentPosition;
-            }else if (currentPosition.z < 4f)
+            }else if (currentPosition.z < initialtablePostion - 4f)
             {
                 currentPosition.z = 4f;
                 table.transform.position = currentPosition;

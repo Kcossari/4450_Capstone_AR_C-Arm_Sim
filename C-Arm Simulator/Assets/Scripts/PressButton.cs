@@ -65,7 +65,7 @@ public class PressButton : MonoBehaviour
 
     public void onButtonGrab()
     {
-        Debug.Log("A button has been pressed");
+        
         if (elapsedTime < duration)
         {
             table.transform.position = Vector3.Lerp(initialPosition, initialPosition + new Vector3(0, -0.3f, 0), elapsedTime / duration);
@@ -74,17 +74,17 @@ public class PressButton : MonoBehaviour
     }
     public void onButtonRelease()
     {
-        Debug.Log("A button has be let go");
+        
         
     }
 
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("button is being pressed");
+        
     }
 
     public void OnTriggerExit(Collider other)
     {
-        Debug.Log("button no longer being pressed");
+        
     }
 }
