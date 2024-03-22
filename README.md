@@ -1,13 +1,7 @@
-# 4450_Capstone_AR_C-Arm_Sim
-4450 Capstone Project: AR C-Arm based, Group 3
-This Project is going to use GitHub, Unity, and 3D Slicer 
-  - GitHub is going to be used for code and script storage
-  - Unity is going to be used for connection / streaming to HoloLens
-  - 3D Slicer is going to be used for Model dev. and Model prejection through Unity
+# SE4450 Capstone - HoloArm
 
-Visual:
-Using Uinty based application for full deployment 
-  3 Teams:
-    1. Control board: Justin & Katie
-    2. Unity Models and Setup in unity: Adam & Maddy
-    3. Volumetric Research: Caleb & Cam 
+Group 3: Katie Cossarini, Caleb Thompson, Adam Freeman, Cameron Blatt, Justin D'Ailly, & Madeleine Di Gregorio
+
+Title: An Augmented Reality C-Arm X-Ray Simulator for Medical Education
+
+Abstract: Minimally invasive surgical procedures, a desirable alternative to open surgery, necessitate the use image guidance to provide visual information to the surgical team. C-arm fluoroscopy is one such common X-ray based mobile imaging system; however, this tool requires extensive training to operate, and excessive use can lead to harmful radiation exposure. This project aims to address deficiencies in traditional medical training practices by developing a radiation-free, augmented reality C-Arm simulation system. The user observes the stand-alone application through the Microsoft HoloLens 2 head-mounted display and interacts with the scene via hand gestures. This project was built using Unity engine, C#, and the Mixed Reality Toolkit. Majority of scene game objects, including the C-Arm, gantry, patient body, and table, were rendered using traditional mesh rendering techniques. To facilitate x-ray capabilities the spine model was represented using volume rendering achieved through the integration of Unity plugins. The C-Arm simulator developed in this project accurately displayed an operation room consisting of the simulated patient; patient table/bed; C-Arm, control panel, and gantry; and TV for displaying acquired medical images. Using hand gestures to trigger interactable buttons on the control panel, the user was able to rotate the C-Arm about the x-axis, or transform its position along the x-, y-, z-axes. The patient table can be transformed along the y- and z-axes, moving the table up/down or in/put of the C-Arm apparatus. When the Digitally Reconstructed Radiograph (DRR) button is triggered, the system was able to successfully capture an x-ray image of the volume-rendered spine and display the snapshot on the TV object within the scene. Multi-user collaboration allows users to participate simultaneously in the shared AR experience. Overall, the C-Arm simulator met the objectives of mimicking the medical environment and generating DRRs in a radiation-free, patient-independent manner. Future assessment is required to determine whether the AR app improves medical training and C-Arm positioning accuracy. This application represents a step toward AR integration into medical teaching and practice.
